@@ -10,17 +10,16 @@ const DB_HOST = env.DB_HOST;
 const DB_NAME = env.DB_NAME;
 const DB_URL = `${DB_DRIVER}://${DB_HOST}:${DB_PORT}/${DB_NAME}`;
 
-const InitDatabase = ({
-	uri: DB_URL,
+const InitDatabase = (
+	{ uri: DB_URL, message = "MongoDB Connected" },
 	option = {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 		useFindAndModify: false,
 		useCreateIndex: true,
 		replicaSet: "rs",
-	},
-	message = "MongoDB Connected",
-}) =>
+	}
+) =>
 	mongoose
 		.connect(DB_URL, option)
 		.then(() => console.log(message))
