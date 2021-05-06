@@ -9,7 +9,7 @@ const schema = new Schema(
       type: String,
       required: true,
     },
-    branh_id: [
+    branch_id: [
       {
         type: Schema.Types.ObjectId,
         ref: BRANCH_MODEL_NAME,
