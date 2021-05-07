@@ -40,3 +40,4 @@ const schema = new Schema(
 const model_name = "parent_address";
 module.exports = mongoose.model(model_name, schema, model_name);
 module.exports.PARENT_ADDRESS_MODEL_NAME = model_name;
+
