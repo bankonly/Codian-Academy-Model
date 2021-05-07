@@ -60,11 +60,6 @@ const schema = new Schema(
       enum: ['male', 'female'],
       default: null,
     },
-    address_id: {
-      type: Schema.Types.ObjectId,
-      ref: 'address',
-      default: null,
-    },
     village: { type: String, default: null },
     district: { type: String, default: null },
     province: { type: String, default: null },

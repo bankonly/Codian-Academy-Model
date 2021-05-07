@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { YEAR_MODEL_NAME } = require("./year_model");
+const { PARENT_MODEL_NAME } = require("./parent_model");
 const Schema = mongoose.Schema;
 
 const schema = new Schema(
@@ -27,6 +27,11 @@ const schema = new Schema(
 		deleted_at: {
 			type: Date,
 			default: null,
+		},
+		parent_id: {
+			ref: PARENT_MODEL_NAME,
+			type: Schema.Types.ObjectId,
+			required: true,
 		},
 	},
 	{ timestamps: { createdAt: "created_at", updatedAt: "updated_at" } }
