@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { PARENT_MODEL_NAME } = require('./parent_model');
 const Schema = mongoose.Schema;
 
 const schema = new Schema(
@@ -7,6 +8,11 @@ const schema = new Schema(
       type: String,
       required: true,
     },
+    parent_id: {
+			ref: PARENT_MODEL_NAME,
+			type: Schema.Types.ObjectId,
+			required: true,
+		},
     deleted_at: {
       type: Date,
       default: null,
