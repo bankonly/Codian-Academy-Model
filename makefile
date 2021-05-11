@@ -1,6 +1,6 @@
 publish:
 	git pull
-	node script.js
+	node script
 	git add .
 	git commit -m $m
 	git push
