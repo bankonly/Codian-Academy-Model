@@ -35,5 +35,6 @@ const schema = new Schema(
 );
 
 const model_name = "reply_gallery";
-module.exports = mongoose.model(model_name, schema, model_name);
+const REPLY_GALLERY_MODEL = mongoose.model(model_name, schema, model_name);
+module.exports = REPLY_GALLERY_MODEL
 module.exports.REPLY_GALLERY_MODEL_NAME = model_name;
