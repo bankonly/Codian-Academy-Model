@@ -7,6 +7,6 @@ last_number_of_version++;
 
 pkjs.version = pkjs.version.substring(0, 4) + last_number_of_version;
 
-fs.writeFileSync("./packages.json", JSON.stringify(pkjs));
-
-console.log("Upgrade to " + pkjs.version);
+fs.writeFile("./packages.json", JSON.stringify(pkjs), (err) => {
+	console.log("Upgrade to " + pkjs.version);
+});
