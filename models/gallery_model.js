@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const { STUDENT_MODEL_NAME } = require("./student_model");
 const { TEACHER_MODEL_NAME } = require("./teacher_model");
-const { SUBJECT_MODEL_NAME } = require("./subject_model");
 const Schema = mongoose.Schema;
 
 const schema = new Schema(
