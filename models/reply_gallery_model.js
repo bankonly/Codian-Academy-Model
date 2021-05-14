@@ -11,6 +11,7 @@ const schema = new Schema(
 			ref: GALLERY_MODEL_NAME,
 			requried: true,
 		},
+		discuss_img: { type: String, required: true },
 		replyier_id: {
 			type: Schema.Types.ObjectId,
 			refPath: "on_model",
@@ -36,5 +37,5 @@ const schema = new Schema(
 
 const model_name = "reply_gallery";
 const ReplyGalleryModel = mongoose.model(model_name, schema, model_name);
-module.exports = ReplyGalleryModel
+module.exports = ReplyGalleryModel;
 module.exports.REPLY_GALLERY_MODEL_NAME = model_name;
