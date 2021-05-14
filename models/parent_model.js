@@ -47,14 +47,9 @@ const schema = new Schema(
 			ref: "parent_education",
 			default: null,
 		},
-		created_by: {
+		teacher_id: {
 			type: Schema.Types.ObjectId,
 			ref: TEACHER_MODEL_NAME,
-			default: null,
-		},
-		branch_id: {
-			type: Schema.Types.ObjectId,
-			ref: BRANCH_MODEL_NAME,
 			default: null,
 		},
 		graduated_year: {
