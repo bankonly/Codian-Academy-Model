@@ -29,7 +29,7 @@ const schema = new Schema(
     },
     appointment_date: {
       type: Date,
-      requried: true,
+      required: true,
     },
     appointment_moved: [
       {

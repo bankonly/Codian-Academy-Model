@@ -9,13 +9,13 @@ const schema = new Schema(
 		gallery_id: {
 			type: Schema.Types.ObjectId,
 			ref: GALLERY_MODEL_NAME,
-			requried: true,
+			required: true,
 		},
 		discuss_img: { type: String, required: true },
 		liker: {
 			type: Schema.Types.ObjectId,
 			refPath: "on_model",
-			requried: true,
+			required: true,
 		},
 		on_model: {
 			type: String,

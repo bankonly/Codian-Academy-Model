@@ -8,13 +8,13 @@ const schema = new Schema(
     teacher_id: {
       type: Schema.Types.ObjectId,
       ref: TEACHER_MODEL_NAME,
-      requried: true,
+      required: true,
     },
     student_id: [
       {
         type: Schema.Types.ObjectId,
         ref: STUDENT_MODEL_NAME,
-        requried: true,
+        required: true,
       },
     ],
     title: {
