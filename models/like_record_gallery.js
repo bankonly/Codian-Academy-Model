@@ -1,17 +1,17 @@
 const mongoose = require("mongoose");
 const { GALLERY_MODEL_NAME } = require("./gallery_model");
 const { PARENT_MODEL_NAME } = require("./parent_model");
-const { REPLY_GALLERY_MODEL_NAME } = require("./reply_gallery_model");
 const { TEACHER_MODEL_NAME } = require("./teacher_model");
 const Schema = mongoose.Schema;
 
 const schema = new Schema(
 	{
-		reply_gallery_id: {
+		gallery_id: {
 			type: Schema.Types.ObjectId,
-			ref: REPLY_GALLERY_MODEL_NAME,
+			ref: GALLERY_MODEL_NAME,
 			requried: true,
 		},
+		discuss_img: { type: String, required: true },
 		liker: {
 			type: Schema.Types.ObjectId,
 			refPath: "on_model",
