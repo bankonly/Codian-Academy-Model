@@ -3,6 +3,7 @@ const { CLASSES_MODEL_NAME } = require("./class_model");
 const { TEACHER_MODEL_NAME } = require("./teacher_model");
 const { STUDENT_MODEL_NAME } = require("./student_model");
 const { SUBJECT_MODEL_NAME } = require("./subject_model");
+const { BRANCH_MODEL_NAME } = require("./branch_model");
 const Schema = mongoose.Schema;
 
 const schema = new Schema(
@@ -54,6 +55,11 @@ const schema = new Schema(
 		is_completed: {
 			type: Boolean,
 			default: false,
+		},
+		branch_id: {
+			type: Schema.Types.ObjectId,
+			ref: BRANCH_MODEL_NAME,
+			required: true,
 		},
 		deleted_at: {
 			type: Date,
