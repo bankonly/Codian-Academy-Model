@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { BRANCH_MODEL_NAME } = require("./branch_model");
 const { PARENT_MODEL_NAME } = require("./parent_model");
 const Schema = mongoose.Schema;
 
@@ -30,6 +31,11 @@ const schema = new Schema(
 		},
 		parent_id: {
 			ref: PARENT_MODEL_NAME,
+			type: Schema.Types.ObjectId,
+			required: true,
+		},
+		branch_id: {
+			ref: BRANCH_MODEL_NAME,
 			type: Schema.Types.ObjectId,
 			required: true,
 		},
