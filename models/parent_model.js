@@ -52,6 +52,11 @@ const schema = new Schema(
 			ref: TEACHER_MODEL_NAME,
 			default: null,
 		},
+		branch_id: {
+			type: Schema.Types.ObjectId,
+			ref: BRANCH_MODEL_NAME,
+			default: null,
+		},
 		graduated_year: {
 			type: Number,
 			default: null,
