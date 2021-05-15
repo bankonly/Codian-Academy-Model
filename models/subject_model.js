@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const { YEAR_MODEL_NAME } = require("./year_model");
 const { BRANCH_MODEL_NAME } = require("./branch_model");
+const { TEACHER_MODEL_NAME } = require("./teacher_model");
 const Schema = mongoose.Schema;
 
 const schema = new Schema(
@@ -17,6 +18,11 @@ const schema = new Schema(
 		year_id: {
 			type: Schema.Types.ObjectId,
 			ref: YEAR_MODEL_NAME,
+			required: true,
+		},
+		teacher_id: {
+			ref: TEACHER_MODEL_NAME,
+			type: Schema.Types.ObjectId,
 			required: true,
 		},
 		deleted_at: {
