@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const { BRANCH_MODEL_NAME } = require("./branch_model");
 const { CLASSES_MODEL_NAME } = require("./class_model");
+const { TEACHER_MODEL_NAME } = require("./teacher_model");
 const Schema = mongoose.Schema;
 
 const schema = new Schema(
@@ -43,6 +44,10 @@ const schema = new Schema(
 		class_id: {
 			type: Schema.Types.ObjectId,
 			ref: CLASSES_MODEL_NAME,
+		},
+		teacher_id: {
+			type: Schema.Types.ObjectId,
+			ref: TEACHER_MODEL_NAME,
 		},
 		deleted_at: {
 			type: Date,
