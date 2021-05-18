@@ -22,10 +22,6 @@ const schema = new Schema(
 			type: Number,
 			default: 0,
 		},
-		is_completed: {
-			type: Boolean,
-			default: false,
-		},
 		img: [
 			{
 				type: String,
