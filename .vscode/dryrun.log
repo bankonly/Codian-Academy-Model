@@ -1,0 +1,8 @@
+make: Entering directory 'd:/Programs/alpha-model'
+node script
+git add .
+git commit -m 
+git push
+npm publish
+make: Leaving directory 'd:/Programs/alpha-model'
+ 
