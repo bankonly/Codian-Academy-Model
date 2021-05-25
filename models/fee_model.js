@@ -20,6 +20,10 @@ const schema = new Schema(
 			type: Boolean,
 			default: false,
 		},
+        amount: {
+			type: Number,
+			required: true,
+		},
 		pay_date: {
 			type: Date,
 			required: true,
