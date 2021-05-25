@@ -36,19 +36,19 @@ const schema = new Schema(
       unique: true,
       required: true,
     },
-    // branch_id: {
-    // 	ref: BRANCH_MODEL_NAME,
-    // 	type: Schema.Types.ObjectId,
-    // 	required: true,
-    // },
+    branch_id: {
+    	ref: BRANCH_MODEL_NAME,
+    	type: Schema.Types.ObjectId,
+    	required: true,
+    },
     class_id: {
       type: Schema.Types.ObjectId,
       ref: CLASSES_MODEL_NAME,
     },
-    // teacher_id: {
-    // 	type: Schema.Types.ObjectId,
-    // 	ref: TEACHER_MODEL_NAME,
-    // },
+    teacher_id: {
+    	type: Schema.Types.ObjectId,
+    	ref: TEACHER_MODEL_NAME,
+    },
     deleted_at: {
       type: Date,
       default: null,
