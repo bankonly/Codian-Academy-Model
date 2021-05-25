@@ -43,5 +43,6 @@ const schema = new Schema(
 	{ timestamps: { createdAt: "created_at", updatedAt: "updated_at" } }
 );
 const model_name = "fee";
-module.exports = mongoose.model(model_name, schema, model_name);
+const FeeModel = mongoose.model(model_name, schema, model_name);
+module.exports = FeeModel
 module.exports.FEE_MODEL_NAME = model_name;
