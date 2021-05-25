@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
-const { BLOG_TASK_MODEL } = require("./blog_task_model");
-const { PARENT_MODEL_NAME } = require("./parent_model");
+const { BRANCH_MODEL_NAME } = require("./branch_model");
 const { STUDENT_MODEL_NAME } = require("./student_model");
 const { TEACHER_MODEL_NAME } = require("./teacher_model");
 
@@ -23,6 +22,17 @@ const schema = new Schema(
 		},
 		pay_date: {
 			type: Date,
+			required: true,
+		},
+        branch_id: {
+			type: Schema.Types.ObjectId,
+			ref: BRANCH_MODEL_NAME,
+			required: true,
+		},
+        // Add who create this fee
+        teacher_id: {
+			type: Schema.Types.ObjectId,
+			ref: TEACHER_MODEL_NAME,
 			required: true,
 		},
 		deleted_at: {
