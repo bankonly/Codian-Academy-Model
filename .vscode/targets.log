@@ -1,0 +1,335 @@
+make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+ 
+# GNU Make 4.3
+# Built for Windows32
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Mon May 24 10:40:03 2021
+
+# Variables
+
+# environment
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
+# environment
+PROVIDE_FULLSTACK_ACTION = true
+# environment
+SYSTEMDRIVE = C:
+# environment
+JAVA_HOME = C:\Program Files\OpenJDK\openjdk-8u262-b10
+# environment
+LC_ALL = C
+# environment
+USERPROFILE = C:\Users\PC
+# environment
+VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
+# environment
+UUID = 69a88006-1baa-4f14-8edb-339df6278345
+# environment
+LOCALAPPDATA = C:\Users\PC\AppData\Local
+# environment
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-56d6eb2a-5fe3-4cb3-b5ad-3b8e216d5983-sock
+# environment
+VSCODE_CWD = D:\Programs\alpha-model
+# environment
+CHOCOLATEYINSTALL = C:\ProgramData\chocolatey
+# environment
+SYSTEMROOT = C:\Windows
+# environment
+PROCESSOR_LEVEL = 6
+# environment
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules
+# environment
+GOOGLE_API_KEY = no
+# default
+MAKE_COMMAND := C:/ProgramData/chocolatey/lib/make/tools/install/bin/make.exe
+# environment
+THREE_SCALE_USER_TOKEN = 9e7da76708fe374d8c10fa752e72989f
+# environment
+GOPATH = C:\Users\PC\go
+# automatic
+@D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = D:/Programs/alpha-model
+# automatic
+%D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
+# environment
+OLDPWD = D:/Programs
+# automatic
+^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
+# environment
+VSCODE_LOG_STACK = false
+# automatic
+%F = $(notdir $%)
+# environment
+LANG = C
+# default
+.LOADED := 
+# environment
+TMP = C:\Users\PC\AppData\Local\Temp
+# default
+.INCLUDE_DIRS = .
+# environment
+PROCESSOR_ARCHITEW6432 = AMD64
+# makefile
+MAKEFLAGS = pqrR
+# environment
+ONEDRIVE = C:\Users\PC\OneDrive
+# makefile
+CURDIR := d:/Programs/alpha-model
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatic
+*D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
+# environment
+PROGRAMFILES = C:\Program Files (x86)
+# environment
+WALLABY_PRODUCTION = true
+# environment
+MFLAGS = -pqrR
+# default
+.SHELLFLAGS := -c
+# environment
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# automatic
++D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
+# environment
+GIT_ASKPASS = c:\Program Files\Microsoft VS Code\resources\app\extensions\git\dist\askpass.sh
+# makefile (from 'makefile', line 1)
+MAKEFILE_LIST := makefile
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_PID = 5912
+# automatic
+?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
+# environment
+GOOGLE_DEFAULT_CLIENT_ID = no
+# environment
+VERBOSE_LOGGING = true
+# automatic
+*F = $(notdir $*)
+# environment
+AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# automatic
+<D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+ONEDRIVECONSUMER = C:\Users\PC\OneDrive
+# default
+MAKE_HOST := Windows32
+# environment
+ANDROID_HOME = C:\Users\PC\AppData\Local\Android\Sdk
+# environment
+PROGRAMDATA = C:\ProgramData
+# default
+SHELL := C:/Program Files/Git/usr/bin/sh.exe
+# environment
+HOMEPATH = \Users\PC
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 2
+# environment
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# environment
+COMSPEC = C:\Windows\system32\cmd.exe
+# environment
+WINDIR = C:\Windows
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\PC\bin;C:\Python27;C:\Python27\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\MongoDB\Server\4.2\bin;C:\Program Files\PuTTY;C:\Program Files (x86)\Bitvise SSH Client;D:\Programs\Dart\flutter\bin;C:\Go\bin;C:\Users\PC\AppData\Local\Android\Sdk\platform-tools;C:\ProgramData\chocolatey\bin;C:\Program Files\OpenJDK\openjdk-8u262-b10\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;D:\Programs\Taobao-scraping;C:\Program Files\ffmpeg\bin;C:\Users\PC\AppData\Local\Programs\Python\Python38-32\Scripts;C:\Users\PC\AppData\Local\Programs\Python\Python38-32;C:\Users\PC\AppData\Local\Microsoft\WindowsApps;C:\Users\PC\AppData\Roaming\npm;C:\Program Files\MongoDB\Server\4.2\bin;D:\Programs\Dart\flutter\bin;C:\Users\PC\go\bin;C:\Go\bin;C:\Users\PC\AppData\Local\Android\Sdk\platform-tools;C:\Program Files\heroku\bin;C:\Users\PC\AppData\Local\atom\bin;D:\Programs\Taobao-scraping;C:\Program Files\ffmpeg\bin
+# environment
+COMPUTERNAME = DESKTOP-GQ40IQO
+# default
+MAKEFILES := 
+# environment
+VSCODE_GIT_IPC_HANDLE = \\.\pipe\vscode-git-23f8307254-sock
+# environment
+VSCODE_GIT_ASKPASS_NODE = C:\Program Files\Microsoft VS Code\Code.exe
+# automatic
+^F = $(notdir $^)
+# environment
+PROMPT = $P$G
+# environment
+CHOCOLATEYLASTPATHUPDATE = 132458416269562609
+# environment
+VSCODE_GIT_ASKPASS_MAIN = c:\Program Files\Microsoft VS Code\resources\app\extensions\git\dist\askpass-main.js
+# environment
+LOGONSERVER = \\DESKTOP-GQ40IQO
+# environment
+USERNAME = PC
+# environment
+VSCODE_LOGS = C:\Users\PC\AppData\Roaming\Code\logs\20210524T103952
+# environment
+TERM_PROGRAM = vscode
+# environment
+RECOMMENDER_API_URL = https://f8a-analytics-2445582058137.production.gw.apicast.io:443/api/v2
+# environment
+COMMONPROGRAMFILES = C:\Program Files (x86)\Common Files
+# automatic
+?F = $(notdir $?)
+# environment
+PROGRAMW6432 = C:\Program Files
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+# automatic
++F = $(notdir $+)
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+USERDOMAIN = DESKTOP-GQ40IQO
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+OS = Windows_NT
+# makefile
+.DEFAULT_GOAL := publish
+# environment
+PIPE_LOGGING = true
+# default
+MAKE_VERSION := 4.3
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# environment
+USERDOMAIN_ROAMINGPROFILE = DESKTOP-GQ40IQO
+# environment
+NUMBER_OF_PROCESSORS = 8
+# environment
+PUBLIC = C:\Users\Public
+# environment
+VSCODE_NODE_CACHED_DATA_DIR = C:\Users\PC\AppData\Roaming\Code\CachedData\cd9ea6488829f560dc949a8b2fb789f3cdc05f5d
+# environment
+_ = C:/Program Files/Microsoft VS Code/Code.exe
+# environment
+APPDATA = C:\Users\PC\AppData\Roaming
+# environment
+HOMEDRIVE = C:
+# environment
+COLORTERM = truecolor
+# environment
+PROCESSOR_ARCHITECTURE = x86
+# environment
+MSYSTEM = MINGW64
+# environment
+HOME = C:\Users\PC
+# environment
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# environment
+EXEPATH = C:\Program Files\Git\bin
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+TEMP = C:\Users\PC\AppData\Local\Temp
+# environment
+TERM = xterm-256color
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\ea75601404b968667eb2f78a0de0635a-1.46.1-main-sock
+# environment
+ELECTRON_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_5912_QQOQUCRYFTZUXTBT
+# environment
+GOOGLE_DEFAULT_CLIENT_SECRET = no
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# environment
+PLINK_PROTOCOL = ssh
+# default
+SUFFIXES := 
+# environment
+ALLUSERSPROFILE = C:\ProgramData
+# environment
+SESSIONNAME = Console
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync load
+# environment
+PROCESSOR_REVISION = 9e0d
+# environment
+TERM_PROGRAM_VERSION = 1.46.1
+# environment
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 158 Stepping 13, GenuineIntel
+# variable set hash-table stats:
+# Load=127/1024=12%, Rehash=0, Collisions=12/153=8%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (key d:/Programs/alpha-model, mtime 1621827600): 11 files, no impossibilities.
+
+# 11 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+publish:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'makefile', line 2):
+	node script
+	git add .
+	git commit -m $m
+	git push
+	npm publish
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-05-24 10:39:34
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=5/1024=0%, Rehash=0, Collisions=0/15=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 15 / storage = 125 B / avg = 8 B
+# current buf: size = 8174 B / used = 125 B / count = 15 / avg = 8 B
+
+# strcache performance: lookups = 20 / hit rate = 25%
+# hash-table stats:
+# Load=15/8192=0%, Rehash=0, Collisions=0/20=0%
+# Finished Make data base on Mon May 24 10:40:03 2021
+
+ 

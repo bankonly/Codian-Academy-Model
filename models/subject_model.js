@@ -22,6 +22,16 @@ const schema = new Schema(
       ref: CLASSES_MODEL_NAME,
       required: true,
     },
+    learn_day: {
+      type: String,
+      required: true,
+      enum: [1, 2, 3, 4, 5, 6, 0],
+    },
+    learn_time: {
+      type: String,
+      required: true,
+    },
+    // Save who created data
     teacher_id: {
       ref: TEACHER_MODEL_NAME,
       type: Schema.Types.ObjectId,
