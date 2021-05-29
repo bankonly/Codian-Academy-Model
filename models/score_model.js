@@ -36,7 +36,7 @@ const schema = new Schema(
       default: null,
     },
   },
-  { timestamps: { createdAt: "created_at", updatedAt: "updated_at" } }
+  { timestamps: { : "created_at", updatedAt: "updated_at" } }
 );
 
 const model_name = "subject";

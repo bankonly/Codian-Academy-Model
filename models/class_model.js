@@ -19,13 +19,6 @@ const schema = new Schema(
       type: Schema.Types.ObjectId,
       required: true,
     },
-    student_id: [
-      {
-        ref: STUDENT_MODEL_NAME,
-        type: Schema.Types.ObjectId,
-        required: true,
-      },
-    ],
     deleted_at: {
       type: Date,
       default: null,
