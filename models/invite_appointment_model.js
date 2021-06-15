@@ -1,15 +1,20 @@
 const mongoose = require("mongoose");
 const { BRANCH_MODEL_NAME } = require("./branch_model");
-const { INVITE_APPOINTMENT_MODEL_NAME } = require("./invite_appointment_model");
 const { PARENT_MODEL_NAME } = require("./parent_model");
 const { TEACHER_MODEL_NAME } = require("./teacher_model");
 const Schema = mongoose.Schema;
 
 const schema = new Schema(
   {
-    invite_id: {
+    created_by: {
       type: Schema.Types.ObjectId,
-      ref: INVITE_APPOINTMENT_MODEL_NAME,
+      required: true,
+      refPath: "on_model",
+    },
+    on_model: {
+      type: String,
+      enum: [TEACHER_MODEL_NAME, PARENT_MODEL_NAME],
+      required: true,
     },
     teacher_id: [
       {
@@ -23,6 +28,31 @@ const schema = new Schema(
         ref: PARENT_MODEL_NAME,
       },
     ],
+    title: {
+      type: String,
+      required: true,
+    },
+    desc: {
+      type: String,
+      required: true,
+    },
+    appointment_place: {
+      type: String,
+      default: null,
+    },
+    start_time: {
+      type: Date,
+      required: true,
+    },
+    end_time: {
+      type: Date,
+      required: true,
+    },
+    branch_id: {
+      type: Schema.Types.ObjectId,
+      ref: BRANCH_MODEL_NAME,
+      required: true,
+    },
     deleted_at: {
       type: Date,
       default: null,
@@ -30,6 +60,6 @@ const schema = new Schema(
   },
   { timestamps: { createdAt: "created_at", updatedAt: "updated_at" } }
 );
-const model_name = "appointment";
+const model_name = "invite_appointment";
 module.exports = mongoose.model(model_name, schema, model_name);
-module.exports.APPOINTMENT_MODEL_NAME = model_name;
+module.exports.INVITE_APPOINTMENT_MODEL_NAME = model_name;

@@ -13,25 +13,14 @@ const schema = new Schema(
       type: String,
       required: true,
     },
-    score_count: {
+    score_type: {
       type: Number,
       required: true,
     },
-    class_id: {
-      type: Schema.Types.ObjectId,
-      ref: CLASSES_MODEL_NAME,
+    score_time: {
+      type: Number,
       required: true,
     },
-    learn_day: {
-      type: String,
-      required: true,
-      enum: [1, 2, 3, 4, 5, 6, 0],
-    },
-    learn_time: {
-      type: String,
-      required: true,
-    },
-    // Save who created data
     teacher_id: {
       ref: TEACHER_MODEL_NAME,
       type: Schema.Types.ObjectId,

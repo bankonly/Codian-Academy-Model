@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { BLOG_TASK_MODEL } = require("./blog_task_model");
 const { BRANCH_MODEL_NAME } = require("./branch_model");
 const { STUDENT_MODEL_NAME } = require("./student_model");
 const { TEACHER_MODEL_NAME } = require("./teacher_model");
@@ -6,29 +7,21 @@ const Schema = mongoose.Schema;
 
 const schema = new Schema(
 	{
-		teacher_id: {
+		blog_task_id: {
 			type: Schema.Types.ObjectId,
-			ref: TEACHER_MODEL_NAME,
+			ref: BLOG_TASK_MODEL,
 		},
-		title: {
+		status: {
 			type: String,
-			required: true,
+			enum: ["done", "backlog"],
+			default: "backlog",
 		},
-		desc: {
-			type: String,
-			required: true,
+		student_id:
+		{
+			type: Schema.Types.ObjectId,
+			ref: STUDENT_MODEL_NAME,
+			require: true,
 		},
-		img: {
-			type: String,
-			default: null,
-		},
-		student_id: [
-			{
-				type: Schema.Types.ObjectId,
-				ref: STUDENT_MODEL_NAME,
-				require: true,
-			},
-		],
 		deleted_at: {
 			type: Date,
 			default: null,
@@ -36,6 +29,6 @@ const schema = new Schema(
 	},
 	{ timestamps: { createdAt: "created_at", updatedAt: "updated_at" } }
 );
-const model_name = "blog_task";
+const model_name = "blog_task_status";
 module.exports = mongoose.model(model_name, schema, model_name);
-module.exports.BLOG_TASK_MODEL = model_name;
+module.exports.BLOG_TASK_STATUAS_MODEL = model_name;

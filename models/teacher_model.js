@@ -5,11 +5,6 @@ const Schema = mongoose.Schema;
 
 const schema = new Schema(
   {
-    user_name: {
-      type: String,
-      required: true,
-      unique: true,
-    },
     first_name: {
       type: String,
       required: true,
@@ -18,9 +13,36 @@ const schema = new Schema(
       type: String,
       required: true,
     },
+    user_name: {
+      type: String,
+      required: true,
+      unique: true,
+    },
+    password: {
+      type: String,
+      required: true,
+    },
     img: {
       type: String,
       required: true,
+    },
+
+    gender: {
+      type: String,
+      enum: ["male", "female"],
+      required: true,
+    },
+    date_of_birth: {
+      type: Date,
+      default: null,
+    },
+    is_super_admin: {
+      type: Boolean,
+      default: false,
+    },
+    refresh_token: {
+      type: String,
+      default: null,
     },
     role_id: {
       type: Schema.Types.ObjectId,
@@ -30,31 +52,12 @@ const schema = new Schema(
       type: Schema.Types.ObjectId,
       ref: BRANCH_MODEL_NAME,
     },
-    password: {
-      type: String,
-      required: true,
-    },
-    gender: {
-      type: String,
-      enum: ["male", "female"],
-      required: true,
-    },
-    date_of_birth: {
-      type: Date,
-      required: true,
-    },
-    is_super_admin: {
-      type: Boolean,
-      default: false,
-    },
+
     deleted_at: {
       type: Date,
       default: null,
     },
-    refresh_token: {
-      type: String,
-      default: null,
-    },
+
   },
   { timestamps: { createdAt: "created_at", updatedAt: "updated_at" } }
 );

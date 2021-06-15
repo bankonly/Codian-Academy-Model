@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const { BRANCH_MODEL_NAME } = require("./branch_model");
-const { TEACHER_MODEL_NAME } = require("./teacher_model");
+const { PARENT_MODEL_NAME } = require("./parent_model");
+const { CLASSES_MODEL_NAME } = require("./class_model");
 const Schema = mongoose.Schema;
 
 const schema = new Schema(
@@ -35,18 +35,13 @@ const schema = new Schema(
 			unique: true,
 			required: true,
 		},
-		branch_id: {
-			ref: BRANCH_MODEL_NAME,
-			type: Schema.Types.ObjectId,
-			required: true,
-		},
 		class_id: {
 			type: Schema.Types.ObjectId,
-			ref: "class",
+			ref: CLASSES_MODEL_NAME,
 		},
-		teacher_id: {
+		parent_id: {
 			type: Schema.Types.ObjectId,
-			ref: TEACHER_MODEL_NAME,
+			ref: PARENT_MODEL_NAME,
 		},
 		deleted_at: {
 			type: Date,

@@ -16,14 +16,8 @@ const schema = new Schema(
       ref: SUBJECT_MODEL_NAME,
       required: true,
     },
-    teacher_scored: {
-      type: Schema.Types.ObjectId,
-      ref: TEACHER_MODEL_NAME,
-      required: true,
-    },
-    score: {
+    point: {
       type: Number,
-      enum: [1, 2, 3, 0],
       default: 0,
     },
     month: {
@@ -39,6 +33,6 @@ const schema = new Schema(
   { timestamps: { createdAt: "created_at", updatedAt: "updated_at" } }
 );
 
-const model_name = "subject";
+const model_name = "subject_score";
 module.exports = mongoose.model(model_name, schema, model_name);
-module.exports.SUBJECT_MODEL_NAME = model_name;
+module.exports.SUBJECT_SCORE_MODEL_NAME = model_name;
