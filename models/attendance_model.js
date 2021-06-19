@@ -7,7 +7,19 @@ const schema = new Schema(
       type: Schema.Types.ObjectId,
       ref: 'student',
     },
-    is_absent: {
+    going_school: {
+      type: Boolean,
+      default: false,
+    },
+    going_home: {
+      type: Boolean,
+      default: false,
+    },
+    at_school: {
+      type: Boolean,
+      default: false,
+    },
+    at_home: {
       type: Boolean,
       default: false,
     },

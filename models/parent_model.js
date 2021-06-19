@@ -5,16 +5,18 @@ const Schema = mongoose.Schema;
 
 const schema = new Schema(
 	{
-		username: {
-			type: String,
-			required: true,
-		},
+
 		first_name: {
 			type: String,
 			required: true,
 		},
 		last_name: {
 			type: String,
+			required: true,
+		},
+		username: {
+			type: String,
+			unique: true,
 			required: true,
 		},
 		password: {
@@ -27,7 +29,7 @@ const schema = new Schema(
 		},
 		nationality: {
 			type: String,
-			required: true,
+			default: null,
 		},
 		tribe: {
 			// Zon phao
@@ -42,24 +44,10 @@ const schema = new Schema(
 			type: String,
 			default: null,
 		},
-		education_id: {
-			type: Schema.Types.ObjectId,
-			ref: "parent_education",
-			default: null,
-		},
-		teacher_id: {
-			type: Schema.Types.ObjectId,
-			ref: TEACHER_MODEL_NAME,
-			default: null,
-		},
 		branch_id: {
 			type: Schema.Types.ObjectId,
 			ref: BRANCH_MODEL_NAME,
-			default: null,
-		},
-		graduated_year: {
-			type: Number,
-			default: null,
+			required: true
 		},
 		phone_number: [
 			{
@@ -72,19 +60,6 @@ const schema = new Schema(
 			enum: ["male", "female"],
 			default: null,
 		},
-		village: { type: String, default: null },
-		district: { type: String, default: null },
-		province: { type: String, default: null },
-		parent_status: {
-			type: String,
-			default: null,
-		},
-		student_id: [
-			{
-				type: Schema.Types.ObjectId,
-				ref: "student",
-			},
-		],
 		refresh_token: {
 			type: String,
 			default: null,

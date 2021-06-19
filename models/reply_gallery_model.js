@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const { GALLERY_IMAGE_MODEL_NAME } = require("./gallery_image_model");
 const { GALLERY_MODEL_NAME } = require("./gallery_model");
 const { PARENT_MODEL_NAME } = require("./parent_model");
 const { TEACHER_MODEL_NAME } = require("./teacher_model");
@@ -6,12 +7,11 @@ const Schema = mongoose.Schema;
 
 const schema = new Schema(
 	{
-		gallery_id: {
+		gallery_image_id: {
 			type: Schema.Types.ObjectId,
-			ref: GALLERY_MODEL_NAME,
+			ref: GALLERY_IMAGE_MODEL_NAME,
 			required: true,
 		},
-		discuss_img: { type: String, required: true },
 		replyier_id: {
 			type: Schema.Types.ObjectId,
 			refPath: "on_model",
@@ -22,11 +22,11 @@ const schema = new Schema(
 			enum: [PARENT_MODEL_NAME, TEACHER_MODEL_NAME],
 			required: true,
 		},
-		desc: {
+		comment: {
 			type: String,
 			required: true,
 		},
-		img: [{ type: String, required: false }],
+		img: { type: String, required: false },
 		deleted_at: {
 			type: Date,
 			default: null,

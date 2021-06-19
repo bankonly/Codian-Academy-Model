@@ -11,13 +11,6 @@ const schema = new Schema(
 			ref: TEACHER_MODEL_NAME,
 			required: true,
 		},
-		student_id: [
-			{
-				type: Schema.Types.ObjectId,
-				ref: STUDENT_MODEL_NAME,
-				required: true,
-			},
-		],
 		title: {
 			type: String,
 			required: true,
@@ -26,12 +19,7 @@ const schema = new Schema(
 			type: String,
 			default: null,
 		},
-		branch_id: {
-			type: Schema.Types.ObjectId,
-			ref: BRANCH_MODEL_NAME,
-			required: true,
-		},
-		img: [{ type: String, required: true }],
+		img: { type: String, required: true },
 		deleted_at: {
 			type: Date,
 			default: null,

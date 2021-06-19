@@ -16,28 +16,13 @@ const schema = new Schema(
 			type: String,
 			required: true,
 		},
-		is_paid: {
-			type: Boolean,
-			default: false,
-		},
-        amount: {
+		amount: {
 			type: Number,
 			required: true,
 		},
 		pay_date: {
 			type: Date,
-			required: true,
-		},
-        branch_id: {
-			type: Schema.Types.ObjectId,
-			ref: BRANCH_MODEL_NAME,
-			required: true,
-		},
-        // Add who create this fee
-        teacher_id: {
-			type: Schema.Types.ObjectId,
-			ref: TEACHER_MODEL_NAME,
-			required: true,
+			default: null,
 		},
 		deleted_at: {
 			type: Date,

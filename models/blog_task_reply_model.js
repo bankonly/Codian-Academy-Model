@@ -1,7 +1,7 @@
-const mongoose = require('mongoose');
-const { BLOG_TASK_MODEL } = require('./blog_task_model');
-const { PARENT_MODEL_NAME } = require('./parent_model');
-const { TEACHER_MODEL_NAME } = require('./teacher_model');
+const mongoose = require("mongoose");
+const { BLOG_TASK_MODEL } = require("./blog_task_model");
+const { PARENT_MODEL_NAME } = require("./parent_model");
+const { TEACHER_MODEL_NAME } = require("./teacher_model");
 
 const Schema = mongoose.Schema;
 
@@ -13,7 +13,7 @@ const schema = new Schema(
     },
     author_id: {
       type: Schema.Types.ObjectId,
-      refPath: 'on_model',
+      refPath: "on_model",
     },
     on_model: {
       type: String,
@@ -24,23 +24,18 @@ const schema = new Schema(
       type: String,
       required: true,
     },
-    like: {
-      type: Number,
-      default: 0,
+    img: {
+      type: String,
+      default: null,
     },
-    img: [
-      {
-        type: String,
-        default: null,
-      },
-    ],
+
     deleted_at: {
       type: Date,
       default: null,
     },
   },
-  { timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' } }
+  { timestamps: { createdAt: "created_at", updatedAt: "updated_at" } }
 );
-const model_name = 'blog_task_reply';
+const model_name = "blog_task_reply";
 module.exports = mongoose.model(model_name, schema, model_name);
 module.exports.BLOG_TASK_REPLY_MODEL = model_name;

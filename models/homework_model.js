@@ -8,25 +8,13 @@ const Schema = mongoose.Schema;
 
 const schema = new Schema(
 	{
-		teacher_id: {
+		class_id:
+		{
 			type: Schema.Types.ObjectId,
-			ref: TEACHER_MODEL_NAME,
-			required: true,
+			ref: CLASSES_MODEL_NAME,
+			default: null,
 		},
-		student_id: [
-			{
-				type: Schema.Types.ObjectId,
-				ref: STUDENT_MODEL_NAME,
-				default: null,
-			},
-		],
-		class_id: [
-			{
-				type: Schema.Types.ObjectId,
-				ref: CLASSES_MODEL_NAME,
-				default: null,
-			},
-		],
+
 		subject_id: {
 			type: Schema.Types.ObjectId,
 			ref: SUBJECT_MODEL_NAME,
@@ -46,19 +34,6 @@ const schema = new Schema(
 		},
 		dead_line: {
 			type: Date,
-			required: true,
-		},
-		completed_date: {
-			type: Date,
-			default: null,
-		},
-		is_completed: {
-			type: Boolean,
-			default: false,
-		},
-		branch_id: {
-			type: Schema.Types.ObjectId,
-			ref: BRANCH_MODEL_NAME,
 			required: true,
 		},
 		deleted_at: {

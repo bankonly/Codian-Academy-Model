@@ -7,11 +7,6 @@ const Schema = mongoose.Schema;
 
 const schema = new Schema(
 	{
-		teacher_id: {
-			type: Schema.Types.ObjectId,
-			ref: TEACHER_MODEL_NAME,
-			required: true,
-		},
 		student_id: {
 			type: Schema.Types.ObjectId,
 			ref: STUDENT_MODEL_NAME,
@@ -20,11 +15,6 @@ const schema = new Schema(
 		class_id: {
 			type: Schema.Types.ObjectId,
 			ref: CLASSES_MODEL_NAME,
-			required: true,
-		},
-		branch_id: {
-			type: Schema.Types.ObjectId,
-			ref: BRANCH_MODEL_NAME,
 			required: true,
 		},
 		amount: {
