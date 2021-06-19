@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 
 const schema = new Schema(
   {
-    PointerEvent: {
+    point: {
       type: String,
       required: true,
     },
