@@ -51,7 +51,7 @@ const schema = new Schema(
     // if all parent accepted is_set will equal to TRUE
     is_set: {
       type: Boolean,
-      required: false,
+      default: false,
     },
     deleted_at: {
       type: Date,
