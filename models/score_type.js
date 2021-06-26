@@ -3,11 +3,7 @@ const Schema = mongoose.Schema;
 
 const schema = new Schema(
   {
-    la_name: {
-      type: String,
-      required: true,
-    },
-    en_name: {
+    name: {
       type: String,
       required: true,
     },
