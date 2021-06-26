@@ -53,11 +53,6 @@ const schema = new Schema(
       type: Boolean,
       required: false,
     },
-    branch_id: {
-      type: Schema.Types.ObjectId,
-      ref: BRANCH_MODEL_NAME,
-      required: true,
-    },
     deleted_at: {
       type: Date,
       default: null,
