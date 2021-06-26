@@ -13,6 +13,18 @@ const schema = new Schema(
       type: String,
       required: true,
     },
+    learn_time: [
+      {
+        day: {
+          type: Number,
+          enum: [0, 1, 2, 3, 4, 5, 6],
+        },
+        time: {
+          type: Date,
+          required: true,
+        },
+      },
+    ],
     score_type: {
       type: Number,
       required: true,
@@ -23,6 +35,11 @@ const schema = new Schema(
     },
     teacher_id: {
       ref: TEACHER_MODEL_NAME,
+      type: Schema.Types.ObjectId,
+      required: true,
+    },
+    class_id: {
+      ref: CLASSES_MODEL_NAME,
       type: Schema.Types.ObjectId,
       required: true,
     },
