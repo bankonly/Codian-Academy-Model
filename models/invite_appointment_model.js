@@ -16,17 +16,17 @@ const schema = new Schema(
       enum: [TEACHER_MODEL_NAME, PARENT_MODEL_NAME],
       required: true,
     },
-    teacher_id: [
+    teachers: [
       {
-        type: Schema.Types.ObjectId,
-        ref: TEACHER_MODEL_NAME,
-      },
+        status: { type: String, enum: ["pending", "accepted", "declined"] },
+        teacher_id: { type: Schema.Types.ObjectId, ref: TEACHER_MODEL_NAME }
+      }
     ],
-    parent_id: [
+    parents: [
       {
-        type: Schema.Types.ObjectId,
-        ref: PARENT_MODEL_NAME,
-      },
+        status: { type: String, enum: ["pending", "accepted", "declined"] },
+        parent_id: { type: Schema.Types.ObjectId, ref: PARENT_MODEL_NAME },
+      }
     ],
     title: {
       type: String,
@@ -46,11 +46,6 @@ const schema = new Schema(
     },
     end_time: {
       type: Date,
-      required: true,
-    },
-    branch_id: {
-      type: Schema.Types.ObjectId,
-      ref: BRANCH_MODEL_NAME,
       required: true,
     },
     deleted_at: {
