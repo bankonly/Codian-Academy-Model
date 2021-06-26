@@ -24,6 +24,10 @@ const schema = new Schema(
 			type: Date,
 			default: null,
 		},
+		is_paid: {
+			type: Boolean,
+			default: false,
+		},
 		deleted_at: {
 			type: Date,
 			default: null,
