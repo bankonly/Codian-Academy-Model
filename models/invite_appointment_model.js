@@ -48,6 +48,16 @@ const schema = new Schema(
       type: Date,
       required: true,
     },
+    // if all parent accepted is_set will equal to TRUE
+    is_set: {
+      type: Boolean,
+      required: false,
+    },
+    branch_id: {
+      type: Schema.Types.ObjectId,
+      ref: BRANCH_MODEL_NAME,
+      required: true,
+    },
     deleted_at: {
       type: Date,
       default: null,
