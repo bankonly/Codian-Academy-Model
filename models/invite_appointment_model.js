@@ -18,14 +18,16 @@ const schema = new Schema(
     },
     teachers: [
       {
-        status: { type: String, enum: ["pending", "accepted", "declined"] },
-        teacher_id: { type: Schema.Types.ObjectId, ref: TEACHER_MODEL_NAME }
+        status: { type: String, enum: ["pending", "accepted", "declined"], default: "pending" },
+        teacher_id: { type: Schema.Types.ObjectId, ref: TEACHER_MODEL_NAME },
+        reason: { type: String, default: null }
       }
     ],
     parents: [
       {
-        status: { type: String, enum: ["pending", "accepted", "declined"] },
+        status: { type: String, enum: ["pending", "accepted", "declined"], default: "pending" },
         parent_id: { type: Schema.Types.ObjectId, ref: PARENT_MODEL_NAME },
+        reason: { type: String, default: null }
       }
     ],
     title: {
