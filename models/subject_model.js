@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const { CLASSES_MODEL_NAME } = require("./class_model");
 const { TEACHER_MODEL_NAME } = require("./teacher_model");
+const { SCORE_TYPE_MODEL_NAME } = require("./score_type");
 const Schema = mongoose.Schema;
 
 const schema = new Schema(
@@ -19,18 +20,23 @@ const schema = new Schema(
           type: Number,
           enum: [0, 1, 2, 3, 4, 5, 6],
         },
-        time: {
-          type: Date,
+        start_time: {
+          type: String,
+          required: true,
+        },
+        end_time: {
+          type: String,
           required: true,
         },
       },
     ],
-    score_type: {
+    score_time: {
       type: Number,
       required: true,
     },
-    score_time: {
-      type: Number,
+    score_type: {
+      ref: SCORE_TYPE_MODEL_NAME,
+      type: Schema.Types.ObjectId,
       required: true,
     },
     teacher_id: {
