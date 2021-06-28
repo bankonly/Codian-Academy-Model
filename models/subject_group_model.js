@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { SUBJECT_MODEL_NAME } = require("./subject_model");
+const { YEAR_MODEL_NAME } = require("./year_model");
 const Schema = mongoose.Schema;
 
 const schema = new Schema(
@@ -8,8 +8,8 @@ const schema = new Schema(
       type: String,
       required: true,
     },
-    subject_id: [{
-      ref: SUBJECT_MODEL_NAME,
+    year_id: [{
+      ref: YEAR_MODEL_NAME,
       type: Schema.Types.ObjectId,
       required: true,
     }],

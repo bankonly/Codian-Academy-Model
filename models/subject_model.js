@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const { CLASSES_MODEL_NAME } = require("./class_model");
 const { TEACHER_MODEL_NAME } = require("./teacher_model");
 const { SCORE_TYPE_MODEL_NAME } = require("./score_type");
+const { SUBJECT_GROUP_MODEL_NAME } = require("./subject_group_model");
 const Schema = mongoose.Schema;
 
 const schema = new Schema(
@@ -12,13 +13,14 @@ const schema = new Schema(
     },
     en_name: {
       type: String,
-      required: true,
+      default: null,
     },
     learn_time: [
       {
         day: {
           type: Number,
           enum: [0, 1, 2, 3, 4, 5, 6],
+          required: true,
         },
         start_time: {
           type: String,
@@ -26,6 +28,7 @@ const schema = new Schema(
         },
         end_time: {
           type: String,
+          required: true,
           required: true,
         },
       },
@@ -36,6 +39,11 @@ const schema = new Schema(
     },
     score_type: {
       ref: SCORE_TYPE_MODEL_NAME,
+      type: Schema.Types.ObjectId,
+      required: true,
+    },
+    subject_group: {
+      ref: SUBJECT_GROUP_MODEL_NAME,
       type: Schema.Types.ObjectId,
       required: true,
     },
