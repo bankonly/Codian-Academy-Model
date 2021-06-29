@@ -15,24 +15,6 @@ const schema = new Schema(
       type: String,
       default: null,
     },
-    learn_time: [
-      {
-        day: {
-          type: Number,
-          enum: [0, 1, 2, 3, 4, 5, 6],
-          required: true,
-        },
-        start_time: {
-          type: String,
-          required: true,
-        },
-        end_time: {
-          type: String,
-          required: true,
-          required: true,
-        },
-      },
-    ],
     score_time: {
       type: Number,
       required: true,
@@ -42,18 +24,13 @@ const schema = new Schema(
       type: Schema.Types.ObjectId,
       required: true,
     },
-    subject_group: {
-      ref: SUBJECT_GROUP_MODEL_NAME,
-      type: Schema.Types.ObjectId,
-      required: true,
-    },
     teacher_id: {
       ref: TEACHER_MODEL_NAME,
       type: Schema.Types.ObjectId,
       required: true,
     },
-    class_id: {
-      ref: CLASSES_MODEL_NAME,
+    subject_group_id: {
+      ref: SUBJECT_GROUP_MODEL_NAME,
       type: Schema.Types.ObjectId,
       required: true,
     },
