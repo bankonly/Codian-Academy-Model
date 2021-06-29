@@ -9,6 +9,10 @@ const schema = new Schema(
       type: String,
       required: true,
     },
+    name: {
+      type: Number,
+      default: 100000,
+    },
     deleted_at: {
       type: Date,
       default: null,
