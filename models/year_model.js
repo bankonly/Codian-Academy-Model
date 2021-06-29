@@ -9,7 +9,7 @@ const schema = new Schema(
       type: String,
       required: true,
     },
-    name: {
+    fee_amount: {
       type: Number,
       default: 100000,
     },
