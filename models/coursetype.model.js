@@ -5,8 +5,7 @@ const model_name = "course_type";
 
 const schema = new mongoose.Schema(
   {
-    name_la: { type: String, required: true },
-    name_en: { type: String, required: true },
+    name: { type: String, required: true },
     deleted_at: { type: Date, default: null },
   },
   DB_TIMESTAMP_CONFIG
