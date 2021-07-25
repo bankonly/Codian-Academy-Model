@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const { DB_TIMESTAMP_CONFIG } = require("../utils/common-func");
-const { CourseSubjectModelName } = require("./coursesubject.model");
+const { CourseTypeModelName } = require("./coursetype.model");
 
 const model_name = "instructor";
 
@@ -11,7 +11,7 @@ const schema = new mongoose.Schema(
     desc: { type: String, default: null },
     img: { type: String, default: null },
     cover_img: { type: String, default: null },
-    course_subject_id: [{ type: mongoose.Schema.Types.ObjectId, ref: CourseSubjectModelName, required: true }],
+    course_type_id: [{ type: mongoose.Schema.Types.ObjectId, ref: CourseTypeModelName, required: true }],
     deleted_at: { type: Date, default: null },
   },
   DB_TIMESTAMP_CONFIG

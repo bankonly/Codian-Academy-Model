@@ -20,7 +20,6 @@ const schema = new mongoose.Schema(
     deleted_at: { type: Date, default: null },
     course_tool_id: [{ type: mongoose.Schema.Types.ObjectId, required: true, ref: CourseToolModelName }],
     course_type_id: [{ type: mongoose.Schema.Types.ObjectId, required: true, ref: CourseTypeModelName }],
-    course_subject_id: [{ type: mongoose.Schema.Types.ObjectId, required: true, ref: CourseSubjectModelName }],
     user_id: { type: mongoose.Schema.Types.ObjectId, required: true, ref: UserModelName },
   },
   DB_TIMESTAMP_CONFIG
