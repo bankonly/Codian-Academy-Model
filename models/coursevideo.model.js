@@ -11,6 +11,7 @@ const schema = new mongoose.Schema(
         title: { type: String, required: true },
         desc: { type: String, default: null },
         video_path: { type: String, required: true },
+        full_video_path: { type: String, required: true },
         course_id: { type: mongoose.Schema.Types.ObjectId, ref: CourseModelName, required: true },
         video_max_size: { type: Number, required: true },
         last_watch_time: { type: Number, default: 0 },
