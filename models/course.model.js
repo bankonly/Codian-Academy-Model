@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 const { DB_TIMESTAMP_CONFIG } = require("../utils/common-func");
 const { CourseToolModelName } = require("./coursetool.model");
 const { UserModelName } = require("./user.model");
-const { CourseSubjectModelName } = require("./coursesubject.model");
 const { CourseTypeModelName } = require("./coursetype.model");
 
 const model_name = "course";
