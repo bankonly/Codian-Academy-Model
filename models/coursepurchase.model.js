@@ -15,6 +15,7 @@ const schema = new mongoose.Schema(
     price: { type: Number, required: true },
     total: { type: Number, required: true },
     sub_total: { type: Number, required: true },
+    is_approved: { type: Boolean, default: false },
     user_id: { type: mongoose.Schema.Types.ObjectId, ref: UserModelName, required: true },
     payment_method_id: { type: mongoose.Schema.Types.ObjectId, ref: PaymentMethodModelName, default: null },
     course_id: { type: mongoose.Schema.Types.ObjectId, ref: CourseModelName, required: true },
