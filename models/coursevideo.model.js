@@ -17,7 +17,7 @@ const schema = new mongoose.Schema(
         video_max_size: { type: Number, required: true },
         video_time: { type: Number, default: 0 },
         is_sized_resolution: { type: Boolean, default: false },
-        snipped_file: [{ type: String, default: null }],
+        snipped_file: [{ path: { type: String, default: null }, name: { type: String, default: null } }],
         deleted_at: { type: Date, default: null },
     },
     DB_TIMESTAMP_CONFIG
