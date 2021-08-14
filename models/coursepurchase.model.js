@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const { DB_TIMESTAMP_CONFIG } = require("../utils/common-func");
 const { CourseModelName } = require("./course.model");
 const { DiscountModelName } = require("./discount.model");
+const { EnrollTypeModelName } = require("./enrolltype.model");
 const { PaymentMethodModelName } = require("./paymentmethod.model");
 const { StatusModelName } = require("./status.model");
 const { UserModelName } = require("./user.model");
@@ -19,6 +20,7 @@ const schema = new mongoose.Schema(
     course_id: { type: mongoose.Schema.Types.ObjectId, ref: CourseModelName, required: true },
     discount_id: { type: mongoose.Schema.Types.ObjectId, ref: DiscountModelName, default: null },
     status: { type: mongoose.Schema.Types.ObjectId, ref: StatusModelName, required: true },
+    enroll_type_id: { type: mongoose.Schema.Types.ObjectId, required: true, ref: EnrollTypeModelName },
     deleted_at: { type: Date, default: null },
   },
   DB_TIMESTAMP_CONFIG
