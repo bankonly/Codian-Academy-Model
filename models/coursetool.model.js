@@ -6,6 +6,8 @@ const model_name = "course_tool";
 const schema = new mongoose.Schema(
   {
     name: { type: String, required: true },
+    title: { type: String, default: null },
+    desc: { type: String, default: null },
     deleted_at: { type: Date, default: null },
   },
   DB_TIMESTAMP_CONFIG
