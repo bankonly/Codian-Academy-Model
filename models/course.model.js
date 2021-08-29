@@ -14,7 +14,7 @@ const schema = new mongoose.Schema(
     desc: { type: String, required: true },
     overview_desc: { type: String, default: null },
     course_for: { type: String, required: true },
-    price: { type: Number, required: true },
+    price: { type: Number, default: 0 },
     is_free: { type: Boolean, default: false },
     thumbnail: [{ type: String, default: null }],
     tags: { type: String, default: null },
