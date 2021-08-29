@@ -17,6 +17,8 @@ const schema = new mongoose.Schema(
     price: { type: Number, default: 0 },
     is_free: { type: Boolean, default: false },
     thumbnail: [{ type: String, default: null }],
+    will_learn: [{ name: { type: String, default: null } }],
+    requirement: { type: String, default: null },
     tags: { type: String, default: null },
     is_publish: { type: Boolean, default: false },
     is_approved: { type: Boolean, default: false },
