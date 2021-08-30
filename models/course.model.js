@@ -15,6 +15,7 @@ const schema = new mongoose.Schema(
     overview_desc: { type: String, default: null },
     course_for: { type: String, required: true },
     price: { type: Number, default: 0 },
+    course_duration: { type: Number, default: 0 },
     is_free: { type: Boolean, default: false },
     thumbnail: [{ type: String, default: null }],
     will_learn: [{ name: { type: String, default: null } }],
