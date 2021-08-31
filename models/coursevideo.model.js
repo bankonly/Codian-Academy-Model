@@ -15,7 +15,7 @@ const schema = new mongoose.Schema(
         video_path: { type: String, required: true },
         full_video_path: { type: String, required: true },
         course_id: { type: mongoose.Schema.Types.ObjectId, ref: CourseModelName, required: true },
-        couse_section_id: { type: mongoose.Schema.Types.ObjectId, ref: CourseSection, required: true },
+        course_section_id: { type: mongoose.Schema.Types.ObjectId, ref: CourseSection, required: true },
         video_max_size: { type: Number, required: true },
         video_time: { type: Number, default: 0 },
         is_sized_resolution: { type: Boolean, default: false },
